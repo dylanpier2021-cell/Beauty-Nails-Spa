@@ -6,7 +6,8 @@ import { dirname, join, relative } from 'node:path'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const dist = join(root, 'dist')
-const SITE_URL = 'https://beautynailsspacu.com'
+// Keep in sync with SITE_URL in src/data/business.ts.
+const SITE_URL = 'https://www.beautynailsspacu.com'
 
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true })
