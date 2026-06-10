@@ -109,16 +109,28 @@ To add or change photos:
 
 ## Booking (GoHighLevel + 10% deposit)
 
-The `/book` page embeds Hien's GoHighLevel (GHL) calendar. All booking config lives in `src/data/booking.ts`.
+The `/book` page is a guided, mobile-friendly flow:
 
-To turn on online booking:
+1. **Service** - the guest picks a service (pulled from `src/data/services`).
+2. **Specialist** - the guest picks one of the team members in `src/data/staff.ts`.
+3. **Time and deposit** - that specialist's GoHighLevel (GHL) calendar loads and handles date and time, contact info, and the 10% deposit checkout.
 
-1. In GHL, open Hien's calendar, then the share / embed option, and copy the iframe `src` from the embed code. It looks like `https://api.leadconnectorhq.com/widget/booking/XXXXXXXXXXXX` (white-label sub-accounts may use a custom domain, that is fine).
-2. Paste that URL into `ghlCalendarUrl` in `src/data/booking.ts`, then `npm run build` and redeploy.
+### Connect each specialist's calendar
 
-Until that URL is set, the page shows a "reserve by phone" fallback, so nothing looks broken.
+Edit `src/data/staff.ts`. For each person, set their name/role and paste their GHL calendar embed URL into `ghlCalendarUrl`:
 
-**The 10% deposit is configured in GHL, not in code.** In the same calendar: open the **Payments** tab, connect **Stripe**, enable **Accept payments**, choose **Deposit**, and set it to **10%**. The deposit is then collected securely inside the booking widget during checkout. The website never handles card details, which keeps it PCI-safe and avoids storing payment data. The deposit percentage shown in the page copy comes from `depositPercent` in the same file, so keep the two in sync.
+1. In GHL, open that person's calendar, then the share / embed option, and copy the iframe `src`. It looks like `https://api.leadconnectorhq.com/widget/booking/XXXXXXXXXXXX` (white-label sub-accounts may use a custom domain, that is fine).
+2. Paste it into the matching person in `staff.ts`, then `npm run build` and redeploy.
+
+There are three specialists seeded: Hannah, Anna, and a placeholder "Team Member" - rename the third in `staff.ts`. Until a person's URL is set, choosing them shows a "call to book" fallback, so nothing looks broken.
+
+### The 10% deposit (configured in GHL, not in code)
+
+On **each** specialist's calendar in GHL: open the **Payments** tab, connect **Stripe**, enable **Accept payments**, choose **Deposit**, and set it to **10%**. The deposit is collected securely inside the GHL widget during checkout. The website never handles card details, which keeps it PCI-safe. The percentage shown in the page copy comes from `depositPercent` in `src/data/booking.ts`, so keep the two in sync.
+
+### Optional: prefill the chosen service
+
+If a calendar's booking form has a custom field for the requested service, set its GHL "query key" as `servicePrefillParam` in `src/data/booking.ts` and the selected service name is passed through automatically. Leave it blank to skip (unknown params are ignored by GHL).
 
 ## Before launch (to replace)
 

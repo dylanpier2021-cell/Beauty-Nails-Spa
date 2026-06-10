@@ -11,15 +11,8 @@ import { Container } from '@/components/Container'
 import { MapEmbed } from '@/components/MapEmbed'
 import { Photo } from '@/components/Photo'
 import { Reveal } from '@/components/Reveal'
-import { BookingWidget } from '@/components/BookingWidget'
-import {
-  ClockIcon,
-  MailIcon,
-  MapPinIcon,
-  PhoneIcon,
-  ShieldCheckIcon,
-  SparkleIcon,
-} from '@/components/icons'
+import { BookingFlow } from '@/components/BookingFlow'
+import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon, SparkleIcon } from '@/components/icons'
 
 const breadcrumbs: BreadcrumbItem[] = [
   { name: 'Home', path: '/' },
@@ -56,20 +49,10 @@ export default function Book() {
               align="center"
               eyebrow="Book online"
               title="Reserve your appointment"
-              subtitle="Choose your service, date and time below. Your spot is confirmed once your deposit is received."
+              subtitle={`Choose your service, then your specialist, then a time. A ${booking.depositPercent}% deposit confirms your spot and goes toward your service total.`}
             />
-
-            <div className="mx-auto mt-6 flex max-w-2xl items-start gap-3 rounded-2xl border border-primary/30 bg-secondary p-4">
-              <ShieldCheckIcon width={22} height={22} className="mt-0.5 shrink-0 text-primary-dark" />
-              <p className="text-sm leading-relaxed text-charcoal/90">
-                A <strong className="font-semibold">{booking.depositPercent}% deposit</strong> confirms
-                your appointment and is applied to your final service total. Payment is handled securely
-                through our booking system, and the remaining balance is due at the salon.
-              </p>
-            </div>
-
-            <div className="mt-6">
-              <BookingWidget />
+            <div className="mt-8">
+              <BookingFlow />
             </div>
           </div>
         </Container>
