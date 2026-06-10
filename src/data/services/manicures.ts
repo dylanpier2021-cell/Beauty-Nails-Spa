@@ -1,0 +1,327 @@
+import type { Service } from "../types"
+
+export const manicureServices: Service[] = [
+  {
+    slug: "manicure",
+    category: "Manicures",
+    name: "Classic Manicure",
+    shortName: "Classic Manicure",
+    title: "Classic Manicure in Champaign, IL | Beauty Nails Spa",
+    description: "A caring, thorough classic manicure in Champaign at Beauty Nails Spa. Shaping, cuticle care, relaxing massage and your choice of polish, all for $30.",
+    tagline: "A relaxing, head-to-toe hand treatment that never goes out of style.",
+    intro: [
+      "The classic manicure is the foundation of every great nail experience, and at Beauty Nails Spa we treat it with the same care and attention we bring to every service on our menu. Your visit begins with careful shaping and buffing, moves into gentle cuticle grooming, and finishes with a soothing hand massage before your chosen polish is applied in smooth, even coats.",
+      "It is the perfect entry point if you are visiting us for the first time or if you simply want well-kept, polished nails without added length or a cured finish. Guests who want longer-lasting color often upgrade to a [gel manicure](/manicure-gel) on the same visit, and our techs are happy to walk you through the difference so you leave with exactly what fits your lifestyle.",
+    ],
+    benefits: [
+      "Neat, even shaping and buffing for a clean, healthy-looking nail",
+      "Gentle cuticle care that keeps nails tidy without over-cutting",
+      "A relaxing hand and wrist massage that melts away tension",
+      "A smooth base for your choice of any polish shade in our collection",
+      "Quick, approachable service that fits easily into a lunch break",
+      "100 percent sterilized tools used fresh for every single guest",
+    ],
+    whoFor: "The classic manicure suits anyone who wants well-groomed, polished nails without extra length or a cured finish. It is a great choice for first-time guests, those with shorter natural nails, anyone on a tighter schedule, and clients who simply enjoy the ritual of a proper hand treatment on a regular basis.",
+    process: [
+      { title: "Shape and buff", detail: "We file your nails to your preferred shape, whether round, square, oval or somewhere in between, and lightly buff the surface for a smooth canvas." },
+      { title: "Soak and soften", detail: "Your hands rest in a warm, relaxing soak that softens cuticles and skin before we begin any grooming." },
+      { title: "Cuticle care", detail: "Cuticles are gently pushed back and any excess cleaned away, keeping nails neat and encouraging healthy growth." },
+      { title: "Massage", detail: "A moisturizing hand and lower-arm massage eases tension and leaves skin feeling soft and refreshed." },
+      { title: "Polish application", detail: "A thin base coat, two coats of your chosen color and a protective top coat finish the service with a clean, even shine." },
+    ],
+    aftercare: [
+      "Let polish cure fully for at least an hour before exposing nails to water",
+      "Apply hand lotion and cuticle oil daily to keep skin and nails hydrated",
+      "Wear gloves for household cleaning to protect the finish",
+      "Return every 1 to 2 weeks to keep the shape and polish looking fresh",
+    ],
+    longevity: "Polish lasts 5 to 7 days with care",
+    prices: [
+      { name: "Basic Manicure", price: "$30", duration: "~30 min" },
+    ],
+    priceFrom: "$30",
+    duration: "~30 min",
+    gallery: [
+      "Clean almond shape with a classic soft pink",
+      "Short square nails in a bright coral polish",
+      "Sheer nude on naturally shaped nails",
+      "Rounded nails buffed and finished in a warm red",
+    ],
+    faqs: [
+      {
+        q: "What is included in a classic manicure?",
+        a: "Our classic manicure covers shaping and buffing, a warm soak, cuticle grooming, a relaxing hand massage and your choice of regular polish. No gel or curing lamp is involved.",
+      },
+      {
+        q: "How long does traditional polish last after a manicure?",
+        a: "Regular polish typically lasts 5 to 7 days with normal wear. Applying cuticle oil daily and avoiding prolonged water exposure helps the finish hold longer.",
+      },
+      {
+        q: "Can I combine a classic manicure with a pedicure on the same visit?",
+        a: "Absolutely. Our Manicure and Pedicure Combo covers both services together for $70, saving you time and letting you enjoy a longer, more relaxing appointment.",
+      },
+    ],
+    related: ["manicure-gel", "manicure-spa", "manicure-french-tip", "pedicure"],
+  },
+
+  {
+    slug: "manicure-gel",
+    category: "Manicures",
+    name: "Gel Manicure",
+    shortName: "Gel Manicure",
+    title: "Gel Manicure in Champaign, IL | Beauty Nails Spa",
+    description: "Long-lasting gel manicures in Champaign, IL. Glossy, chip-resistant color cured under LED that stays beautiful for 2 to 3 weeks. Book at Beauty Nails Spa.",
+    tagline: "Glossy, chip-resistant color that stays flawless for weeks.",
+    intro: [
+      "A gel manicure pairs a careful, spa-quality hand treatment with color cured under an LED lamp, so your shine lasts far longer than traditional lacquer. The result is a smooth, high-gloss finish that resists chips from the moment you leave our Champaign studio.",
+      "At Beauty Nails Spa, every gel manicure starts with thoughtful shaping and gentle cuticle care before a single drop of color goes on. If you are weighing your options, our techs are glad to compare gel with [dip powder](/dip-powder-nails) so you leave with the finish that fits your routine.",
+    ],
+    benefits: [
+      "Stays glossy and chip-resistant for 2 to 3 weeks",
+      "Dries instantly under the lamp, so there is no smudging on your way out",
+      "Hundreds of shades, from soft neutrals to bold statement colors",
+      "Strengthens and protects your natural nail as it grows",
+      "Removes cleanly with a gentle soak that protects your nail bed",
+    ],
+    whoFor: "Gel is perfect if you want color that survives a busy week of typing, dishes and errands without chipping. It is a favorite for brides, travelers and anyone tired of touching up traditional polish every few days.",
+    process: [
+      { title: "Consultation and shaping", detail: "We talk through your shade and shape, then file and buff your nails to a clean, even canvas." },
+      { title: "Cuticle and hand care", detail: "Cuticles are gently groomed and your hands enjoy a warm, relaxing massage." },
+      { title: "Base and color", detail: "A bonding base and your chosen gel color are applied in thin, even coats and cured under the LED lamp." },
+      { title: "Top coat and finish", detail: "A glossy top coat seals everything in for a mirror shine and a smooth, durable surface." },
+    ],
+    aftercare: [
+      "Apply cuticle oil daily to keep nails flexible and the finish bright",
+      "Wear gloves for cleaning and dishwashing to protect the seal",
+      "Avoid using your nails as tools to prevent lifting at the edges",
+      "Book a soak-off removal with us rather than peeling to protect your natural nail",
+    ],
+    longevity: "Lasts 2 to 3 weeks",
+    prices: [{ name: "Shellac (Gel) Manicure", price: "$45", duration: "~45 min" }],
+    priceFrom: "$45",
+    duration: "~45 min",
+    gallery: [
+      "Soft greige gel in a glossy almond shape",
+      "Classic red gel on short rounded nails",
+      "Sheer milky pink with a high-shine top coat",
+      "Deep berry gel for a polished evening look",
+    ],
+    faqs: [
+      {
+        q: "How long does a gel manicure last?",
+        a: "Most guests enjoy 2 to 3 weeks of glossy, chip-resistant wear before they are ready for a change, depending on how quickly their nails grow.",
+      },
+      {
+        q: "Is gel safe for my natural nails?",
+        a: "Yes. Applied and removed properly, as we do with a gentle soak, gel protects your nail while it grows. We never file or peel it off in a way that harms the nail bed.",
+      },
+      {
+        q: "Can I add nail art to a gel manicure?",
+        a: "Absolutely. Gel is a great base for everything from a simple accent nail to detailed custom art. Just ask your tech when you arrive.",
+      },
+    ],
+    related: ["manicure", "dip-powder-nails", "manicure-french-tip", "pedicure-gel"],
+  },
+
+  {
+    slug: "manicure-french-tip",
+    category: "Manicures",
+    name: "French Tip Manicure",
+    shortName: "French Tip",
+    title: "French Tip Manicure in Champaign | Beauty Nails Spa",
+    description: "Timeless French tip manicures in Champaign, IL at Beauty Nails Spa. Choose a classic polish finish from $30 or a chip-resistant gel French tip from $45.",
+    tagline: "The clean, classic look that flatters every occasion and every nail shape.",
+    intro: [
+      "A French tip manicure is one of the most requested looks at Beauty Nails Spa, and it is easy to understand why. The soft, natural base paired with a crisp white tip creates a clean, polished appearance that works equally well at a corporate meeting in downtown Champaign, a weekend brunch or a black-tie event. Our technicians take care with the arc of each tip so the line is smooth and consistent across every finger.",
+      "We offer the French look in two finishes to suit your lifestyle. The classic polish version, built on our [basic manicure](/manicure), gives you an elegant result at an accessible price. For guests who want that same timeless look to last weeks without touch-ups, the gel French tip applies the same meticulous technique over a cured [gel manicure](/manicure-gel) base for long-wearing, chip-resistant results.",
+    ],
+    benefits: [
+      "A universally flattering look that complements short and long nails alike",
+      "Brightens the appearance of fingers and makes nails look clean and healthy",
+      "Available in both traditional polish and long-lasting gel finishes",
+      "Custom tip thickness from a barely-there sliver to a bold, defined line",
+      "Pairs beautifully with [nail art](/nail-art) accents on one or two fingers",
+      "100 percent sterilized tools used fresh for your appointment",
+    ],
+    whoFor: "French tips are popular with guests who want a polished, professional look that never feels overdone. They are a go-to for brides and bridal parties, job interviews, graduation photos and anyone who loves an everyday style that feels quietly refined. Both the classic and gel versions suit natural nails, and our gel French tip is especially loved by guests who want the look without worrying about chips.",
+    process: [
+      { title: "Shape and prep", detail: "Nails are filed and buffed to your preferred shape. A slightly squared or oval tip tends to show the French line beautifully, though any shape works." },
+      { title: "Soak and cuticle care", detail: "A brief warm soak softens the skin and cuticles, which are then gently groomed for a neat, tidy nail edge." },
+      { title: "Hand massage", detail: "A moisturizing massage relaxes hands and lower arms before any color is applied." },
+      { title: "Base and sheer pink", detail: "A sheer pink or nude base coat is applied to even the tone of the natural nail and create a soft, natural-looking canvas." },
+      { title: "White tip application", detail: "The crisp white tip is carefully painted freehand or with a guide to create a clean, consistent arc across each nail." },
+      { title: "Top coat seal", detail: "A clear or gel top coat seals the finished look, protecting the line and adding a lasting shine." },
+    ],
+    aftercare: [
+      "Refresh the white tip at home with a thin coat of white polish to extend wear",
+      "Apply cuticle oil daily to keep nails hydrated and the polish flexible",
+      "Avoid harsh cleaning chemicals without gloves, which can yellow the white tip",
+      "For the gel version, book a professional soak-off removal rather than peeling",
+    ],
+    longevity: "Polish: 5 to 7 days. Gel French tip: 2 to 3 weeks",
+    prices: [
+      { name: "Classic French Tip (Basic Manicure)", price: "$30", duration: "~30 min", note: "Traditional polish finish" },
+      { name: "Gel French Tip (Shellac Manicure)", price: "$45", duration: "~45 min", note: "Chip-resistant cured gel finish" },
+    ],
+    priceFrom: "$30",
+    duration: "~30 to 45 min",
+    gallery: [
+      "Classic white tip on oval nails with a sheer pink base",
+      "Gel French tip on short square nails, crisp and bright",
+      "Soft off-white tip for a modern, understated French look",
+      "Bold defined French tip on almond-shaped nails",
+      "Gel French tip with a subtle glitter accent on the ring finger",
+    ],
+    faqs: [
+      {
+        q: "What is the difference between a classic and a gel French tip?",
+        a: "The classic French tip uses traditional air-dry polish and typically lasts 5 to 7 days. The gel French tip is cured under an LED lamp for a finish that stays chip-resistant for 2 to 3 weeks. The look itself is the same.",
+      },
+      {
+        q: "Can you do a French tip on short nails?",
+        a: "Yes. A French tip on shorter nails looks clean and elegant. We simply adjust the width of the white tip to suit the nail length so the proportions feel natural.",
+      },
+      {
+        q: "Is it possible to customize the tip color?",
+        a: "Absolutely. We can do an off-white, pale blush, champagne or even a soft pastel tip instead of the traditional bright white. Just let your technician know the look you are going for.",
+      },
+      {
+        q: "Do I need to do anything before my appointment?",
+        a: "No preparation is needed. Come in with clean hands and we will take care of everything, from removing any existing polish to shaping, treating and finishing your nails.",
+      },
+    ],
+    related: ["manicure-gel", "manicure", "nail-art", "gel-x-nails"],
+  },
+
+  {
+    slug: "manicure-spa",
+    category: "Manicures",
+    name: "Spa Manicure",
+    shortName: "Spa Manicure",
+    title: "Spa Manicure in Champaign, IL | Beauty Nails Spa",
+    description: "A deeply nourishing spa manicure in Champaign at Beauty Nails Spa. Exfoliation, a warming mask and extended massage included. Deluxe care for $38.",
+    tagline: "A deeply nourishing hand retreat that leaves skin noticeably softer.",
+    intro: [
+      "The spa manicure at Beauty Nails Spa takes the foundation of our classic nail care and layers in treatments that go well beyond tidy nails. A sugar or salt exfoliant buffs away dry skin, a warming moisture mask soaks deep into the hands and lower arms, and an extended massage works out tension that builds up from keyboards, steering wheels and everyday life here in Champaign. The result is nails that are shaped and polished beautifully, and hands that feel genuinely renewed.",
+      "Guests who book the spa manicure regularly tell us their hands feel the difference for days afterward, especially through Illinois winters when skin gets dry and rough. It pairs naturally with our [spa pedicure](/pedicure-spa) or [deluxe pedicure](/pedicure-deluxe) if you want a full head-to-toe treatment. For clients who also want longer-lasting color, our team can discuss upgrading the polish finish to gel after the treatment is complete.",
+    ],
+    benefits: [
+      "Exfoliation removes dry, rough skin and smooths the backs of hands",
+      "A warming mask delivers deep hydration that lasts well beyond the appointment",
+      "Extended massage eases muscle tension in hands, wrists and lower arms",
+      "Gentle cuticle care encourages healthy nail growth",
+      "Noticeably softer skin from the very first visit",
+      "A calming, unhurried service that feels like a true break in your day",
+    ],
+    whoFor: "The spa manicure is ideal for guests who want more than tidy nails, particularly those dealing with dry or rough skin, anyone recovering from a stressful stretch at work, or clients who simply enjoy treating themselves to a more immersive experience. It is a thoughtful gift appointment and a favorite with guests who book it as a monthly self-care ritual.",
+    process: [
+      { title: "Shape and buff", detail: "Nails are filed to your preferred shape and the surface is lightly buffed to create a smooth, even canvas before any treatment begins." },
+      { title: "Warm soak", detail: "Your hands soak in warm, softening water to relax the skin and prepare cuticles for gentle, thorough grooming." },
+      { title: "Cuticle care", detail: "Cuticles are carefully pushed back and excess skin removed, keeping the nail bed clean and neat." },
+      { title: "Exfoliation", detail: "A sugar or salt scrub is worked gently over the backs of hands, fingers and lower arms to remove dry skin and encourage circulation." },
+      { title: "Warming mask", detail: "A rich moisture mask is applied and wrapped in a warm towel, allowing the treatment to absorb deeply into skin and soften even rough knuckles." },
+      { title: "Extended massage and polish", detail: "An unhurried hand and arm massage follows the mask. The service finishes with a base coat, two coats of your chosen polish and a protective top coat." },
+    ],
+    aftercare: [
+      "Apply a rich hand cream every morning and evening to extend the softening effects",
+      "Use cuticle oil daily to keep the nail bed hydrated and the polish looking fresh",
+      "Wear gloves for cleaning and dishwashing to protect both the polish and the treated skin",
+      "Schedule a follow-up every 3 to 4 weeks to maintain soft, healthy hands year-round",
+    ],
+    longevity: "Skin benefits last several days. Polish lasts 5 to 7 days",
+    prices: [
+      { name: "Deluxe Manicure", price: "$38", duration: "~35 min" },
+    ],
+    priceFrom: "$38",
+    duration: "~35 min",
+    gallery: [
+      "Hands wrapped in a warm mask towel during spa treatment",
+      "Rich exfoliant being worked over soft hands",
+      "Finished spa manicure in a dusty rose on oval nails",
+      "Extended arm massage mid-service",
+      "Polished, hydrated hands with a warm neutral shade",
+    ],
+    faqs: [
+      {
+        q: "How is a spa manicure different from a classic manicure?",
+        a: "The spa manicure adds three extra steps that a basic manicure does not include: a scrub exfoliation, a warming moisture mask and an extended massage. The nail shaping, cuticle care and polish finish are the same.",
+      },
+      {
+        q: "Can I get gel polish with the spa manicure?",
+        a: "Yes. After the spa treatments are complete, we can apply a gel polish finish instead of regular lacquer. There is an additional charge to upgrade from the base service price. Just let your technician know at the start of your visit.",
+      },
+      {
+        q: "Is the spa manicure good for dry or sensitive skin?",
+        a: "It is one of the best services we offer for dry skin. The exfoliation removes buildup without being harsh, and the moisture mask is deeply nourishing. If you have a known sensitivity to any ingredient, let us know and we will adjust the products we use.",
+      },
+    ],
+    related: ["manicure", "manicure-gel", "pedicure-spa", "pedicure-deluxe"],
+  },
+
+  {
+    slug: "manicure-kids",
+    category: "Manicures",
+    name: "Kids Manicure",
+    shortName: "Kids Manicure",
+    title: "Kids Manicure in Champaign, IL | Beauty Nails Spa",
+    description: "A gentle, fun manicure for children in Champaign at Beauty Nails Spa. Safe, cheerful polish colors and caring techs who make little ones feel special, from $18.",
+    tagline: "A fun, gentle treat that makes little ones feel grown-up and celebrated.",
+    intro: [
+      "At Beauty Nails Spa we believe getting your nails done should be a joyful experience at any age. Our kids manicure is designed for children around 10 and under and focuses on gentle shaping, light cuticle tidying and a fun polish color the child picks out themselves. Our caring technicians take extra time to make children comfortable, explain each step in a friendly way and turn a short appointment into a little celebration.",
+      "Many families in Champaign book a kids manicure as a birthday treat, a back-to-school reward or a special outing alongside a parent or grandparent. Pairing it with a [kids pedicure](/pedicure-kids) is especially popular for full mini-spa days, and some children love picking coordinating shades for hands and feet. We stock an age-appropriate selection of cheerful polish colors, from sparkly pastels to bright fruity shades, so there is always something that gets a big smile.",
+    ],
+    benefits: [
+      "Gentle nail shaping and buffing that is safe for small, growing nails",
+      "A friendly, patient technician who puts children at ease from start to finish",
+      "A wide selection of fun, age-appropriate polish colors to choose from",
+      "Light cuticle tidying without any harsh tools",
+      "A brief hand massage to help little ones relax and enjoy the experience",
+      "A clean, welcoming salon environment that families in Champaign trust",
+    ],
+    whoFor: "Our kids manicure is a lovely choice for children around 10 and under who are curious about nail care or excited to have a special treat. It makes a wonderful birthday gift, a reward for a milestone, or simply a fun outing for a parent and child to share together. Families visiting with older siblings getting other services are always welcome to add a kids appointment to the booking.",
+    process: [
+      { title: "Welcome and color pick", detail: "We invite the child to browse our cheerful polish display and choose their favorite shade, which gets them engaged and excited right from the start." },
+      { title: "Gentle shaping", detail: "Nails are filed lightly to smooth any rough edges, keeping the shape natural and appropriate for small hands." },
+      { title: "Light cuticle care", detail: "Cuticles are gently tidied using only the softest approach, ensuring the experience stays comfortable and reassuring." },
+      { title: "Hand massage", detail: "A brief, light hand massage with a gentle lotion makes the appointment feel special and helps little ones settle in and enjoy the moment." },
+      { title: "Polish and top coat", detail: "The chosen color is applied carefully in neat coats, followed by a clear top coat to seal the finish and help it last as long as possible with active, little hands." },
+    ],
+    aftercare: [
+      "Give the polish about 20 minutes to set before play or handwashing",
+      "Remind children not to pick at the polish so it stays looking neat longer",
+      "Apply a light hand lotion a few times a week to keep nails and cuticles healthy",
+      "Return every 1 to 2 weeks to freshen the color or change to something new",
+    ],
+    longevity: "A bright, cheerful finish that typically lasts several days of active, happy play",
+    prices: [
+      { name: "Polish Change (Hands)", price: "$18", duration: "~15 to 30 min", note: "For children approximately 10 and under" },
+    ],
+    priceFrom: "$18",
+    duration: "~15 to 30 min",
+    gallery: [
+      "Little hands showing off a sparkly lavender polish",
+      "Bright coral on small rounded nails",
+      "Pastel mint green with a glittery top coat",
+      "Soft baby pink finish on a child's neatly shaped nails",
+    ],
+    faqs: [
+      {
+        q: "What age is the kids manicure appropriate for?",
+        a: "We welcome children around 10 and under for our kids manicure. If you are unsure whether it is right for your child's age or nail condition, feel free to call us at (217) 398-1898 and we are happy to talk it through.",
+      },
+      {
+        q: "Is the polish safe for children?",
+        a: "Yes. We use salon-quality polish formulas and take care to select age-appropriate colors. If your child has any known sensitivities, let us know when you book and we will make sure we have the right products ready.",
+      },
+      {
+        q: "Can a parent and child be seated together?",
+        a: "Absolutely. We love family appointments. Let us know when you book that you would like side-by-side seating for a parent and child and we will do our best to arrange it.",
+      },
+      {
+        q: "Can we add a kids pedicure to the same visit?",
+        a: "Yes, and it is one of our most popular combinations. Booking a [kids pedicure](/pedicure-kids) alongside the manicure turns the visit into a genuine mini-spa day for your little one.",
+      },
+    ],
+    related: ["pedicure-kids", "manicure", "nail-art"],
+  },
+]
