@@ -3,7 +3,7 @@
  * profiles (NAP). Used across the UI, footer, contact page and JSON-LD.
  */
 
-export const SITE_URL = 'https://beautynailsspacu.com'
+export const SITE_URL = 'https://www.beautynailsspacu.com'
 
 export const business = {
   name: 'Beauty Nails Spa',
