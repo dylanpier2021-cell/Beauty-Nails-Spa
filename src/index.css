@@ -254,3 +254,8 @@
     text-wrap: pretty;
   }
 }
+
+/* GoHighLevel chat widget: hidden on pages with their own forms (see ChatWidget.tsx). */
+html[data-chat='hidden'] chat-widget {
+  display: none !important;
+}

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { ChatWidget } from '@/components/ChatWidget'
 import { JsonLd } from '@/components/JsonLd'
 import { localBusinessSchema, websiteSchema } from '@/lib/schema'
 
@@ -29,6 +30,7 @@ export default function App() {
         <Outlet />
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   )
 }
