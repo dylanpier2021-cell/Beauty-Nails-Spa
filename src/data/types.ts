@@ -56,12 +56,19 @@ export interface Service {
   longevity: string
   /** Detailed price points for this service. */
   prices: PricePoint[]
-  /** Headline starting price, e.g. "$45". */
+  /** Headline starting price, e.g. "$40". */
   priceFrom: string
   /** Headline duration, e.g. "~45 min". */
   duration: string
   /** Captioned style tiles shown as an accessible look strip. */
   gallery: string[]
+  /**
+   * Explicit, hand-picked photos that genuinely depict this service. The first
+   * entry is the primary image used on the service card. Used by ServiceCard and
+   * the ServiceTemplate look strip. When unset, the templates fall back to the
+   * slug-based selection in src/data/photos.ts.
+   */
+  images?: { name: string; alt: string }[]
   faqs: Faq[]
   /** Slugs of related services to cross-link. */
   related: string[]

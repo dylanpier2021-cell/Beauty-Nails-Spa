@@ -11,8 +11,8 @@ import { Container } from '@/components/Container'
 import { MapEmbed } from '@/components/MapEmbed'
 import { Photo } from '@/components/Photo'
 import { Reveal } from '@/components/Reveal'
-import { BookingFlow } from '@/components/BookingFlow'
-import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon, SparkleIcon } from '@/components/icons'
+import { CalendarEmbed } from '@/components/CalendarEmbed'
+import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon, ShieldCheckIcon, SparkleIcon } from '@/components/icons'
 
 const breadcrumbs: BreadcrumbItem[] = [
   { name: 'Home', path: '/' },
@@ -24,12 +24,20 @@ const emailBody = encodeURIComponent(
   'Hello Beauty Nails Spa,\n\nI would like to request an appointment.\n\nName:\nService:\nPreferred day and time:\nPhone:\n\nThank you!',
 )
 
+// Only mention a deposit when one is actually configured in GHL (see booking.ts).
+const depositClause = booking.depositEnabled
+  ? ` A ${booking.depositPercent}% deposit confirms your spot and goes toward your service total.`
+  : ''
+const seoDescription = booking.depositEnabled
+  ? `Book your visit to Beauty Nails Spa in Champaign, IL online in minutes. A ${booking.depositPercent}% deposit confirms your spot, or call (217) 398-1898. Walk-ins welcome.`
+  : 'Book your visit to Beauty Nails Spa in Champaign, IL online in minutes, or call (217) 398-1898. Walk-ins welcome.'
+
 export default function Book() {
   return (
     <>
       <Seo
         title="Book an Appointment | Beauty Nails Spa Champaign IL"
-        description={`Book your visit to Beauty Nails Spa in Champaign, IL online in minutes. A ${booking.depositPercent}% deposit confirms your spot, or call (217) 398-1898. Walk-ins welcome.`}
+        description={seoDescription}
         path="/book"
       />
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
@@ -37,7 +45,7 @@ export default function Book() {
       <PageHero
         eyebrow="Booking"
         title="Book your visit"
-        subtitle={`Reserve online in about a minute. A ${booking.depositPercent}% deposit confirms your spot and goes toward your service total. Prefer to talk? Call us, and walk-ins are always welcome.`}
+        subtitle={`Reserve online in about a minute.${depositClause} Prefer to talk? Call us, and walk-ins are always welcome.`}
         breadcrumbs={breadcrumbs}
       />
 
@@ -49,10 +57,45 @@ export default function Book() {
               align="center"
               eyebrow="Book online"
               title="Reserve your appointment"
-              subtitle={`Choose your service, then your specialist, then a time. A ${booking.depositPercent}% deposit confirms your spot and goes toward your service total.`}
+              subtitle={`Pick your service and a time that works for you.${depositClause}`}
             />
             <div className="mt-8">
-              <BookingFlow />
+              <div className="mb-5 flex items-start gap-3 rounded-2xl border border-primary/30 bg-secondary p-4">
+                {booking.depositEnabled ? (
+                  <>
+                    <ShieldCheckIcon width={20} height={20} className="mt-0.5 shrink-0 text-primary-dark" />
+                    <p className="text-sm leading-relaxed text-charcoal/90">
+                      A <strong className="font-semibold">{booking.depositPercent}% deposit</strong> confirms your
+                      appointment after you enter your details, and it goes toward your final total. Payment is handled
+                      securely in the booking form below.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <SparkleIcon width={20} height={20} className="mt-0.5 shrink-0 text-primary-dark" />
+                    <p className="text-sm leading-relaxed text-charcoal/90">
+                      Choose any open time below and you will get a confirmation right away. Our technicians work side by
+                      side, so several guests can be seen at the same time.
+                    </p>
+                  </>
+                )}
+              </div>
+
+              {booking.ghlBookingUrl ? (
+                <CalendarEmbed url={booking.ghlBookingUrl} title={`Book at ${business.name}`} />
+              ) : (
+                <div className="rounded-2xl border-2 border-dashed border-primary/40 bg-secondary p-6 text-center">
+                  <h3 className="font-serif text-xl text-charcoal">Almost there</h3>
+                  <p className="mx-auto mt-2 max-w-md text-pretty text-sm leading-relaxed text-muted-foreground">
+                    Online scheduling is being connected. To lock in your appointment, give us a quick call and we will
+                    find the perfect time for you.
+                  </p>
+                  <a href={business.phoneHref} className="btn btn-primary mx-auto mt-4">
+                    <PhoneIcon width={16} height={16} />
+                    Call {business.phoneDisplay}
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </Container>

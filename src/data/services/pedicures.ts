@@ -7,7 +7,7 @@ export const pedicureServices: Service[] = [
     name: "Classic Pedicure",
     shortName: "Classic Pedi",
     title: "Classic Pedicure in Champaign | Beauty Nails Spa",
-    description: "A thorough, relaxing classic pedicure in Champaign, IL. Soak, trim, shape, exfoliate, and polish for beautiful, healthy-looking feet starting at $38.",
+    description: "A thorough, relaxing classic pedicure in Champaign, IL. Soak, trim, shape, exfoliate, and polish for beautiful, healthy-looking feet starting at $35.",
     tagline: "Clean, polished, and perfectly cared-for feet every time.",
     intro: [
       "The Classic Pedicure at Beauty Nails Spa is where every great pedicure begins. We take the time to properly soak your feet, carefully trim and shape your nails, and work through each step with the kind of attention that leaves your feet genuinely refreshed. It is a straightforward service done right, without rushing, and with tools that have been fully sterilized before you sit down.",
@@ -58,12 +58,12 @@ export const pedicureServices: Service[] = [
     prices: [
       {
         name: "Basic Pedicure",
-        price: "$38",
+        price: "$35",
         duration: "~30 min",
         note: "Includes soak, trim, shape, light exfoliation, massage, and traditional polish"
       }
     ],
-    priceFrom: "$38",
+    priceFrom: "$35",
     duration: "~30 min",
     gallery: [
       "Short square toes finished in a classic deep red, clean white cuticle line, natural skin tone",
@@ -71,6 +71,12 @@ export const pedicureServices: Service[] = [
       "Bright coral on medium-length toes, photographed against a summer sandal backdrop",
       "Classic French tip on natural nails, crisp white smile line, timeless and versatile",
       "Cobalt blue on short toes, bold and fresh for a warm Champaign summer weekend"
+    ],
+    images: [
+      { name: "pedicure-closeup", alt: "Clean classic pedicure with freshly polished toes in a spa chair" },
+      { name: "nails-03", alt: "Detailed pedicure with custom nail art on the toes" },
+      { name: "salon-pedicure", alt: "Comfortable pedicure chairs at Beauty Nails Spa in Champaign" },
+      { name: "pedicure-spa", alt: "Smooth, freshly cared-for feet after a relaxing pedicure" }
     ],
     faqs: [
       {
@@ -95,7 +101,7 @@ export const pedicureServices: Service[] = [
     name: "Gel Pedicure",
     shortName: "Gel Pedi",
     title: "Gel Pedicure Champaign IL | Beauty Nails Spa",
-    description: "Chip-resistant gel color on your toes with a full Herbal Pedicure at Beauty Nails Spa in Champaign. Enjoy 2 to 3 weeks of flawless, glossy color starting at $48.",
+    description: "Chip-resistant gel color on your toes with a full Herbal Pedicure at Beauty Nails Spa in Champaign. Enjoy 2 to 3 weeks of flawless, glossy color starting at $47.",
     tagline: "Long-lasting gel color that stays perfect week after week.",
     intro: [
       "A Gel Pedicure at Beauty Nails Spa combines the full pampering of our Herbal Pedicure with gel polish that cures under a UV lamp for a finish so hard and glossy it holds up through sandals, showers, and everything a busy Champaign summer throws at it. Unlike traditional polish, gel does not smudge on the drive home, and the color stays vivid for two to three weeks without chipping.",
@@ -142,13 +148,13 @@ export const pedicureServices: Service[] = [
     prices: [
       {
         name: "Herbal Pedicure with Gel Polish",
-        price: "$48",
-        duration: "~45 min",
+        price: "$47",
+        duration: "~50 min",
         note: "Includes full Herbal Pedicure service with gel color instead of traditional polish; gel upgrade replaces regular polish at no additional listed price at this tier"
       }
     ],
-    priceFrom: "$48",
-    duration: "~45 min",
+    priceFrom: "$47",
+    duration: "~50 min",
     gallery: [
       "Deep burgundy gel on short square toes, mirror-bright finish three weeks in with no visible wear",
       "Dusty mauve gel on rounded nails, soft and sophisticated against warm skin",
@@ -156,6 +162,12 @@ export const pedicureServices: Service[] = [
       "Classic gel French tip on medium-length toes, pristine white edge, cured to a glass-like shine",
       "Forest green gel polish on short toes, rich seasonal color perfect for an Illinois autumn",
       "Glitter gradient gel on toes, clear base fading into rose gold shimmer at the tip"
+    ],
+    images: [
+      { name: "pedicure-gel", alt: "Glossy gel pedicure with chip-resistant color on the toes" },
+      { name: "nails-03", alt: "Detailed pedicure with custom nail art on the toes" },
+      { name: "salon-pedicure", alt: "Comfortable pedicure chairs at Beauty Nails Spa in Champaign" },
+      { name: "pedicure-closeup", alt: "Freshly polished toes after a pedicure" }
     ],
     faqs: [
       {
@@ -184,7 +196,7 @@ export const pedicureServices: Service[] = [
     name: "Spa Pedicure",
     shortName: "Spa Pedi",
     title: "Spa Pedicure in Champaign | Beauty Nails Spa",
-    description: "A genuine mid-tier spa pedicure in Champaign, IL. Choose from Herbal, Hydration, or Jelly Spa treatments for deeply refreshed, silky-smooth feet starting at $48.",
+    description: "A genuine mid-tier spa pedicure in Champaign, IL. Choose from Herbal, Hydration, or Jelly Spa treatments for deeply refreshed, silky-smooth feet starting at $47.",
     tagline: "Step into something more restorative than a basic pedicure.",
     intro: [
       "The Spa Pedicure at Beauty Nails Spa is designed for guests who want more than a polish change and a quick rinse. Depending on the treatment you choose, you will experience layered skin-care benefits: nourishing botanicals from our Herbal formula, intensive moisture from our Hydration blend, or the uniquely satisfying texture of our Jelly Spa soak that turns the footbath into a thick, skin-softening gel. Every option includes a fuller massage, richer exfoliation, and a noticeably more thorough result than a basic service.",
@@ -235,31 +247,37 @@ export const pedicureServices: Service[] = [
     prices: [
       {
         name: "Herbal Pedicure",
-        price: "$48",
-        duration: "~45 min",
+        price: "$47",
+        duration: "~50 min",
         note: "Botanical soak with herbal extracts, extended exfoliation, and lotion massage"
       },
       {
         name: "Hydration Pedicure",
         price: "$50",
-        duration: "~45 min",
+        duration: "~50 min",
         note: "Moisture-focused treatment ideal for dry or weather-damaged skin"
       },
       {
         name: "Jelly Spa Pedicure",
         price: "$55",
-        duration: "~50 min",
+        duration: "~55 min",
         note: "Unique jelly powder transforms the footbath into a skin-softening gel treatment"
       }
     ],
-    priceFrom: "$48",
-    duration: "~45 to 50 min",
+    priceFrom: "$47",
+    duration: "~50 to 55 min",
     gallery: [
       "Soft lavender polish on rounded toes after a Herbal Pedicure, heels visibly smooth and hydrated",
       "Warm terracotta on square toes following the Hydration treatment, skin glowing and even-toned",
       "Rich plum color on medium-length nails after a Jelly Spa service, heel close-up showing silky texture",
       "Sheer pink on short toes, a client's go-to after her monthly Herbal Pedicure appointment",
       "Sage green gel on toes after a Herbal Pedicure upgrade, finished with a matte topcoat"
+    ],
+    images: [
+      { name: "pedicure-spa", alt: "Relaxing spa pedicure with a soothing foot treatment" },
+      { name: "nails-03", alt: "Detailed pedicure with custom nail art on the toes" },
+      { name: "salon-pedicure", alt: "Comfortable pedicure chairs at Beauty Nails Spa in Champaign" },
+      { name: "pedicure-deluxe", alt: "Smooth, hydrated feet after a restorative spa pedicure" }
     ],
     faqs: [
       {
@@ -336,7 +354,7 @@ export const pedicureServices: Service[] = [
       {
         name: "Deluxe Volcano Spa Pedicure",
         price: "$60",
-        duration: "~55 min",
+        duration: "~60 min",
         note: "Volcanic mineral soak, fizzing effervescent bath, mineral masque, and extended massage"
       },
       {
@@ -353,7 +371,7 @@ export const pedicureServices: Service[] = [
       }
     ],
     priceFrom: "$60",
-    duration: "~55 to 60 min",
+    duration: "~60 min",
     gallery: [
       "Deep burgundy on perfectly shaped square toes after a Luxury Pedicure, heels photographed smooth and even",
       "Slate blue gel on medium-length rounded nails, Organic Detox skin treatment visible in the soft, even tone",
@@ -361,6 +379,12 @@ export const pedicureServices: Service[] = [
       "Dusty rose on rounded toes after the Luxury treatment, collagen masque result visible in plump, hydrated skin",
       "Classic red on square toes after an Organic Detox Pedicure, clean cuticle lines and spotless finish",
       "French tip on longer nails following the Volcano Spa, heel close-up shows the callus reduction result after one visit"
+    ],
+    images: [
+      { name: "pedicure-deluxe", alt: "Indulgent deluxe pedicure with a hot stone and masque treatment" },
+      { name: "nails-03", alt: "Detailed pedicure with custom nail art on the toes" },
+      { name: "salon-pedicure", alt: "Comfortable pedicure chairs at Beauty Nails Spa in Champaign" },
+      { name: "pedicure-spa", alt: "Softened, well-cared-for feet after a deluxe pedicure" }
     ],
     faqs: [
       {
@@ -373,7 +397,7 @@ export const pedicureServices: Service[] = [
       },
       {
         q: "Can I pair a Deluxe Pedicure with a manicure on the same visit?",
-        a: "Absolutely, and many guests do. Our [Manicure and Pedicure Combo](/manicure) is a great value at $70 for both services together. If you would like to match a deluxe pedicure with something more elevated for your hands, our [Spa Manicure](/manicure-spa) pairs beautifully."
+        a: "Absolutely, and many guests do. Our [Manicure and Pedicure Combo](/manicure) is a great value at $55 for both services together. If you would like to match a deluxe pedicure with something more elevated for your hands, our [Spa Manicure](/manicure-spa) pairs beautifully."
       }
     ],
     related: ["pedicure-spa", "pedicure", "callus-treatment", "manicure-spa"]
@@ -385,11 +409,11 @@ export const pedicureServices: Service[] = [
     name: "Kids Pedicure",
     shortName: "Kids Pedi",
     title: "Kids Pedicure in Champaign | Beauty Nails Spa",
-    description: "A gentle, fun pedicure for children at Beauty Nails Spa in Champaign. Safe products, patient technicians, and a color they pick themselves. Starting at just $18.",
+    description: "A gentle, fun pedicure for children at Beauty Nails Spa in Champaign. Safe products, patient technicians, and a color they pick themselves. Starting at just $15.",
     tagline: "Little feet, big smiles, and a color they will love.",
     intro: [
       "The Kids Pedicure at Beauty Nails Spa is designed for children about 10 and under who want to feel special alongside a parent or family member. We use gentle, age-appropriate products, keep the service calm and comfortable, and let kids be fully in charge of their color choice. Our technicians are patient and experienced with younger guests, and we move at a pace that lets children relax rather than feel rushed or nervous.",
-      "A polish change on the toes at $18 is the perfect starting point for a first visit. For a full mini spa day, pair this with a [kids manicure](/manicure-kids) so they can match fingertips and toes. Many Champaign families make a mother-daughter or grandparent-grandchild appointment a regular tradition, and we love being part of those moments."
+      "A polish change on the toes at $15 is the perfect starting point for a first visit. For a full mini spa day, pair this with a [kids manicure](/manicure-kids) so they can match fingertips and toes. Many Champaign families make a mother-daughter or grandparent-grandchild appointment a regular tradition, and we love being part of those moments."
     ],
     benefits: [
       "Gentle products chosen with sensitive young skin in mind",
@@ -431,19 +455,25 @@ export const pedicureServices: Service[] = [
     prices: [
       {
         name: "Polish Change, Feet",
-        price: "$18",
-        duration: "~20 to 30 min",
+        price: "$15",
+        duration: "~30 min",
         note: "Includes soak, light nail trim, minimal cuticle care, and full polish application in the child's chosen color"
       }
     ],
-    priceFrom: "$18",
-    duration: "~20 to 30 min",
+    priceFrom: "$15",
+    duration: "~30 min",
     gallery: [
       "Tiny toes painted in bright bubblegum pink, first salon visit for a four-year-old, huge smile in the background",
       "Purple glitter polish on a child's rounded toenails, matched with the same color on her fingers",
       "Pastel rainbow toes on a young guest who asked for a different color on every nail",
       "Bright red on a little girl's short square toes, classic choice for a holiday family outing",
       "Holographic silver on toes, a popular pick among kids who love sparkle"
+    ],
+    images: [
+      { name: "pedicure-kids", alt: "A child's toenails painted in a bright, cheerful color" },
+      { name: "nails-08", alt: "Playful rainbow tip color, a fun look kids love" },
+      { name: "salon-pedicure", alt: "Comfortable pedicure chairs at Beauty Nails Spa in Champaign" },
+      { name: "pedicure-closeup", alt: "Neatly polished toes after a gentle pedicure" }
     ],
     faqs: [
       {
@@ -515,18 +545,24 @@ export const pedicureServices: Service[] = [
     prices: [
       {
         name: "Basic Pedicure with Callus Treatment",
-        price: "$38",
+        price: "$35",
         duration: "~15 to 30 min for the callus focus when added to an existing pedicure",
         note: "Callus treatment is included at no extra charge in all deluxe pedicures; see [deluxe pedicures](/pedicure-deluxe) for full details"
       }
     ],
-    priceFrom: "$38",
+    priceFrom: "$35",
     duration: "~15 to 30 min",
     gallery: [
       "Heel before and after a single callus treatment session, rough yellowed skin reduced to a smooth, even surface",
       "Ball-of-foot close-up after treatment, the hard ridge along the outer edge visibly smoothed and softened",
       "Heels photographed six weeks into a monthly callus treatment routine, continuous improvement visible",
       "Soft, pale heel with a fresh coat of dusty rose polish after a combined callus treatment and classic pedicure"
+    ],
+    images: [
+      { name: "callus-treatment", alt: "Professional callus smoothing on a heel for soft, comfortable feet" },
+      { name: "pedicure-closeup", alt: "Smooth, freshly cared-for feet after callus treatment and a pedicure" },
+      { name: "salon-pedicure", alt: "Comfortable pedicure chairs at Beauty Nails Spa in Champaign" },
+      { name: "nails-03", alt: "Detailed pedicure with polished toes" }
     ],
     faqs: [
       {

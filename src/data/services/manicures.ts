@@ -7,7 +7,7 @@ export const manicureServices: Service[] = [
     name: "Classic Manicure",
     shortName: "Classic Manicure",
     title: "Classic Manicure in Champaign, IL | Beauty Nails Spa",
-    description: "A caring, thorough classic manicure in Champaign at Beauty Nails Spa. Shaping, cuticle care, relaxing massage and your choice of polish, all for $30.",
+    description: "A caring, thorough classic manicure in Champaign at Beauty Nails Spa. Shaping, cuticle care, relaxing massage and your choice of polish, all for $20.",
     tagline: "A relaxing, head-to-toe hand treatment that never goes out of style.",
     intro: [
       "The classic manicure is the foundation of every great nail experience, and at Beauty Nails Spa we treat it with the same care and attention we bring to every service on our menu. Your visit begins with careful shaping and buffing, moves into gentle cuticle grooming, and finishes with a soothing hand massage before your chosen polish is applied in smooth, even coats.",
@@ -37,15 +37,21 @@ export const manicureServices: Service[] = [
     ],
     longevity: "Polish lasts 5 to 7 days with care",
     prices: [
-      { name: "Basic Manicure", price: "$30", duration: "~30 min" },
+      { name: "Basic Manicure", price: "$20", duration: "~30 min" },
     ],
-    priceFrom: "$30",
+    priceFrom: "$20",
     duration: "~30 min",
     gallery: [
       "Clean almond shape with a classic soft pink",
       "Short square nails in a bright coral polish",
       "Sheer nude on naturally shaped nails",
       "Rounded nails buffed and finished in a warm red",
+    ],
+    images: [
+      { name: "nails-04", alt: "Nude pink manicure with subtle accent detailing, a clean classic finish" },
+      { name: "nails-16", alt: "Natural nude nails with a clean, classic shape after a manicure" },
+      { name: "nails-07", alt: "Soft pink and white nails with a clean, polished manicure finish" },
+      { name: "nails-05", alt: "Neutral manicure with a delicate hand-painted accent" },
     ],
     faqs: [
       {
@@ -58,7 +64,7 @@ export const manicureServices: Service[] = [
       },
       {
         q: "Can I combine a classic manicure with a pedicure on the same visit?",
-        a: "Absolutely. Our Manicure and Pedicure Combo covers both services together for $70, saving you time and letting you enjoy a longer, more relaxing appointment.",
+        a: "Absolutely. Our Manicure and Pedicure Combo covers both services together for $55, saving you time and letting you enjoy a longer, more relaxing appointment.",
       },
     ],
     related: ["manicure-gel", "manicure-spa", "manicure-french-tip", "pedicure"],
@@ -97,14 +103,20 @@ export const manicureServices: Service[] = [
       "Book a soak-off removal with us rather than peeling to protect your natural nail",
     ],
     longevity: "Lasts 2 to 3 weeks",
-    prices: [{ name: "Shellac (Gel) Manicure", price: "$45", duration: "~45 min" }],
-    priceFrom: "$45",
-    duration: "~45 min",
+    prices: [{ name: "Shellac (Gel) Manicure", price: "$40", duration: "~30 min" }],
+    priceFrom: "$40",
+    duration: "~30 min",
     gallery: [
       "Soft greige gel in a glossy almond shape",
       "Classic red gel on short rounded nails",
       "Sheer milky pink with a high-shine top coat",
       "Deep berry gel for a polished evening look",
+    ],
+    images: [
+      { name: "nails-13", alt: "Rich burgundy gel manicure with a glossy, chip-resistant finish" },
+      { name: "nails-12", alt: "Warm coral gel manicure with a long-wearing, high-shine finish" },
+      { name: "nails-21", alt: "Red and white marble gel nails with a glossy, rose-accented finish" },
+      { name: "nails-17", alt: "Black ombre gel nails with a smooth, high-gloss finish" },
     ],
     faqs: [
       {
@@ -129,7 +141,7 @@ export const manicureServices: Service[] = [
     name: "French Tip Manicure",
     shortName: "French Tip",
     title: "French Tip Manicure in Champaign | Beauty Nails Spa",
-    description: "Timeless French tip manicures in Champaign, IL at Beauty Nails Spa. Choose a classic polish finish from $30 or a chip-resistant gel French tip from $45.",
+    description: "Timeless French tip manicures in Champaign, IL at Beauty Nails Spa. Choose a classic polish finish from $20 or a chip-resistant gel French tip from $40.",
     tagline: "The clean, classic look that flatters every occasion and every nail shape.",
     intro: [
       "A French tip manicure is one of the most requested looks at Beauty Nails Spa, and it is easy to understand why. The soft, natural base paired with a crisp white tip creates a clean, polished appearance that works equally well at a corporate meeting in downtown Champaign, a weekend brunch or a black-tie event. Our technicians take care with the arc of each tip so the line is smooth and consistent across every finger.",
@@ -160,17 +172,23 @@ export const manicureServices: Service[] = [
     ],
     longevity: "Polish: 5 to 7 days. Gel French tip: 2 to 3 weeks",
     prices: [
-      { name: "Classic French Tip (Basic Manicure)", price: "$30", duration: "~30 min", note: "Traditional polish finish" },
-      { name: "Gel French Tip (Shellac Manicure)", price: "$45", duration: "~45 min", note: "Chip-resistant cured gel finish" },
+      { name: "Classic French Tip (Basic Manicure)", price: "$20", duration: "~30 min", note: "Traditional polish finish" },
+      { name: "Gel French Tip (Shellac Manicure)", price: "$40", duration: "~30 min", note: "Chip-resistant cured gel finish" },
     ],
-    priceFrom: "$30",
-    duration: "~30 to 45 min",
+    priceFrom: "$20",
+    duration: "~30 min",
     gallery: [
       "Classic white tip on oval nails with a sheer pink base",
       "Gel French tip on short square nails, crisp and bright",
       "Soft off-white tip for a modern, understated French look",
       "Bold defined French tip on almond-shaped nails",
       "Gel French tip with a subtle glitter accent on the ring finger",
+    ],
+    images: [
+      { name: "nails-01", alt: "Soft pink and white French tip manicure on a plush white background" },
+      { name: "nails-06", alt: "Deep red French tip nails with a glossy finish" },
+      { name: "nails-22", alt: "Festive red French nails with hand-painted snowflake art" },
+      { name: "nails-07", alt: "Classic pink and white French-style nails, clean and polished" },
     ],
     faqs: [
       {
@@ -199,7 +217,7 @@ export const manicureServices: Service[] = [
     name: "Spa Manicure",
     shortName: "Spa Manicure",
     title: "Spa Manicure in Champaign, IL | Beauty Nails Spa",
-    description: "A deeply nourishing spa manicure in Champaign at Beauty Nails Spa. Exfoliation, a warming mask and extended massage included. Deluxe care for $38.",
+    description: "A deeply nourishing spa manicure in Champaign at Beauty Nails Spa. Exfoliation, a warming mask and extended massage included. Deluxe care for $30.",
     tagline: "A deeply nourishing hand retreat that leaves skin noticeably softer.",
     intro: [
       "The spa manicure at Beauty Nails Spa takes the foundation of our classic nail care and layers in treatments that go well beyond tidy nails. A sugar or salt exfoliant buffs away dry skin, a warming moisture mask soaks deep into the hands and lower arms, and an extended massage works out tension that builds up from keyboards, steering wheels and everyday life here in Champaign. The result is nails that are shaped and polished beautifully, and hands that feel genuinely renewed.",
@@ -230,16 +248,22 @@ export const manicureServices: Service[] = [
     ],
     longevity: "Skin benefits last several days. Polish lasts 5 to 7 days",
     prices: [
-      { name: "Deluxe Manicure", price: "$38", duration: "~35 min" },
+      { name: "Deluxe Manicure", price: "$30", duration: "~30 min" },
     ],
-    priceFrom: "$38",
-    duration: "~35 min",
+    priceFrom: "$30",
+    duration: "~30 min",
     gallery: [
       "Hands wrapped in a warm mask towel during spa treatment",
       "Rich exfoliant being worked over soft hands",
       "Finished spa manicure in a dusty rose on oval nails",
       "Extended arm massage mid-service",
       "Polished, hydrated hands with a warm neutral shade",
+    ],
+    images: [
+      { name: "nails-05", alt: "Neutral spa manicure with a delicate hand-painted accent on soft, hydrated hands" },
+      { name: "nails-20", alt: "Romantic nude and pink polish on smooth, well-cared-for hands" },
+      { name: "nails-04", alt: "Nude pink polish on soft hands after a nourishing spa manicure" },
+      { name: "nails-16", alt: "Natural nude nails with a clean shape after a spa manicure" },
     ],
     faqs: [
       {
@@ -264,7 +288,7 @@ export const manicureServices: Service[] = [
     name: "Kids Manicure",
     shortName: "Kids Manicure",
     title: "Kids Manicure in Champaign, IL | Beauty Nails Spa",
-    description: "A gentle, fun manicure for children in Champaign at Beauty Nails Spa. Safe, cheerful polish colors and caring techs who make little ones feel special, from $18.",
+    description: "A gentle, fun manicure for children in Champaign at Beauty Nails Spa. Safe, cheerful polish colors and caring techs who make little ones feel special, from $10.",
     tagline: "A fun, gentle treat that makes little ones feel grown-up and celebrated.",
     intro: [
       "At Beauty Nails Spa we believe getting your nails done should be a joyful experience at any age. Our kids manicure is designed for children around 10 and under and focuses on gentle shaping, light cuticle tidying and a fun polish color the child picks out themselves. Our caring technicians take extra time to make children comfortable, explain each step in a friendly way and turn a short appointment into a little celebration.",
@@ -294,15 +318,21 @@ export const manicureServices: Service[] = [
     ],
     longevity: "A bright, cheerful finish that typically lasts several days of active, happy play",
     prices: [
-      { name: "Polish Change (Hands)", price: "$18", duration: "~15 to 30 min", note: "For children approximately 10 and under" },
+      { name: "Polish Change (Hands)", price: "$10", duration: "~30 min", note: "For children approximately 10 and under" },
     ],
-    priceFrom: "$18",
-    duration: "~15 to 30 min",
+    priceFrom: "$10",
+    duration: "~30 min",
     gallery: [
       "Little hands showing off a sparkly lavender polish",
       "Bright coral on small rounded nails",
       "Pastel mint green with a glittery top coat",
       "Soft baby pink finish on a child's neatly shaped nails",
+    ],
+    images: [
+      { name: "manicure-kids", alt: "A child's fingernails painted in a cheerful color at the salon" },
+      { name: "nails-08", alt: "Playful rainbow tip nails with a glossy coat, a fun look kids love" },
+      { name: "nails-23", alt: "Pink and yellow flower nails with sparkling accents" },
+      { name: "nails-15", alt: "Festive confetti nail art with soft floral accents" },
     ],
     faqs: [
       {

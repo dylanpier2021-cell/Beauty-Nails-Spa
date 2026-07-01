@@ -107,30 +107,30 @@ To add or change photos:
 2. Run `npm run photos` to generate responsive `-400`, `-800` (and hero `-560`, `-1000`) WebP files.
 3. Add or edit the matching entries (with accurate `alt` text) in `src/data/photos.ts`.
 
-## Booking (GoHighLevel + 10% deposit)
+## Booking (single GoHighLevel Round Robin calendar)
 
 The `/book` page is a guided, mobile-friendly flow:
 
 1. **Service** - the guest picks a service (pulled from `src/data/services`).
-2. **Specialist** - the guest picks one of the team members in `src/data/staff.ts`.
-3. **Time and deposit** - that specialist's GoHighLevel (GHL) calendar loads and handles date and time, contact info, and the 10% deposit checkout.
+2. **Pick a time** - the shared GHL calendar embed loads and handles date and time, contact info, and (optionally) a deposit.
 
-### Connect each specialist's calendar
+One shared GHL Round Robin calendar serves all three technicians. Because the 3 technicians are team members on it, each open slot is bookable up to 3 times (once per available tech), which gives the 3 concurrent bookings. GHL two-way syncs to the salon's Google Calendar. The flow does not ask the guest to pick a specific person. The team list in `src/data/staff.ts` is kept only for an optional "our team" display and is not required for booking to work.
 
-Edit `src/data/staff.ts`. For each person, set their name/role and paste their GHL calendar embed URL into `ghlCalendarUrl`:
+### Human setup in GHL (cannot be done in code)
 
-1. In GHL, open that person's calendar, then the share / embed option, and copy the iframe `src`. It looks like `https://api.leadconnectorhq.com/widget/booking/XXXXXXXXXXXX` (white-label sub-accounts may use a custom domain, that is fine).
-2. Paste it into the matching person in `staff.ts`, then `npm run build` and redeploy.
+1. In GHL, create ONE calendar of type **Round Robin** (for example, name it "Book at Beauty Nails Spa").
+2. Add the **3 technicians as team members** on that calendar with equal / round-robin distribution. This makes each open time slot bookable up to 3 times, once per available tech.
+3. Under the calendar's **Connections**, connect each technician's Google Calendar to the shared calendar `90fd6b904986570d1af205006efe318b9a66a9571dc059cea3d2616563ae6e77@group.calendar.google.com` so confirmed bookings write to Google Calendar and existing Google busy times block GHL.
+4. Optional deposit: open the calendar's **Payments** tab, connect **Stripe**, enable **Accept payments**, choose **Deposit**, set **10 percent**. Then set `depositEnabled: true` in `src/data/booking.ts`.
+5. Copy the calendar's **Embed** code and paste only the iframe `src` value into `ghlBookingUrl` in `src/data/booking.ts`. It looks like `https://api.leadconnectorhq.com/widget/booking/XXXXXXXXXXXX`.
 
-There are three specialists seeded: Hannah, Anna, and a placeholder "Team Member" - rename the third in `staff.ts`. Until a person's URL is set, choosing them shows a "call to book" fallback, so nothing looks broken.
+### Connect the booking page
 
-### The 10% deposit (configured in GHL, not in code)
+Paste the iframe `src` into `ghlBookingUrl` in `src/data/booking.ts`, then `npm run build` and redeploy. Until that value is set, the flow shows a "call to book" fallback, so nothing looks broken.
 
-On **each** specialist's calendar in GHL: open the **Payments** tab, connect **Stripe**, enable **Accept payments**, choose **Deposit**, and set it to **10%**. The deposit is collected securely inside the GHL widget during checkout. The website never handles card details, which keeps it PCI-safe. The percentage shown in the page copy comes from `depositPercent` in `src/data/booking.ts`, so keep the two in sync.
+### The deposit (optional, configured in GHL)
 
-### Optional: prefill the chosen service
-
-If a calendar's booking form has a custom field for the requested service, set its GHL "query key" as `servicePrefillParam` in `src/data/booking.ts` and the selected service name is passed through automatically. Leave it blank to skip (unknown params are ignored by GHL).
+Deposits are off by default. Once Stripe is connected in GHL and you have set the deposit there, set `depositEnabled: true` (and `depositPercent` to match) in `src/data/booking.ts`. The booking copy only promises a deposit when `depositEnabled` is true, so the page never advertises a deposit that is not actually taken.
 
 ## Before launch (to replace)
 

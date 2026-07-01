@@ -24,6 +24,6 @@ export const generalFaqs: Faq[] = [
   },
   {
     q: 'How much is a full set of acrylic nails?',
-    a: 'A full set of regular acrylic starts at $45, and a full set in gel or shellac starts at $55. Final pricing depends on length, shape and any custom art you add.',
+    a: 'A full set of regular acrylic starts at $40, and a full set in gel or shellac starts at $50. Final pricing depends on length, shape and any custom art you add.',
   },
 ]

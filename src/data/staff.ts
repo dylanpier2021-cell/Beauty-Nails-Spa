@@ -1,21 +1,18 @@
 /**
- * The nail specialists guests can book with. Each connects to that person's own
- * GoHighLevel (GHL) calendar.
+ * The nail technicians, kept for an optional "our team" display.
  *
- * SETUP: when a specialist's GHL calendar is ready, paste its embed URL into
- * `ghlCalendarUrl` (see src/data/booking.ts for where to find it). Until then,
- * choosing that person shows a "call to book" fallback. Each calendar should have
- * the 10% deposit enabled in GHL (Payments tab).
- *
- * To rename, add or remove a specialist, just edit this list.
+ * Booking no longer depends on this list. One shared GHL Round Robin calendar (see
+ * src/data/booking.ts) handles all three technicians as team members, so guests book
+ * a time rather than a specific person. This data is safe to edit, reorder or remove
+ * without affecting whether booking works.
  */
+import { booking } from './booking'
+
 export interface StaffMember {
   id: string
   name: string
   role: string
   blurb: string
-  /** Paste this specialist's GHL calendar embed URL. Empty until connected. */
-  ghlCalendarUrl: string
 }
 
 export const staff: StaffMember[] = [
@@ -24,14 +21,12 @@ export const staff: StaffMember[] = [
     name: 'Hannah',
     role: 'Owner and Lead Nail Artist',
     blurb: 'Founder of Beauty Nails Spa, loved for detailed nail art and a gentle, caring touch.',
-    ghlCalendarUrl: '',
   },
   {
     id: 'anna',
     name: 'Anna',
     role: 'Senior Nail Technician',
     blurb: 'A guest favorite for flawless gel, dip and classic sets that truly last.',
-    ghlCalendarUrl: '',
   },
   {
     // TODO: replace the name and role with your third technician's details.
@@ -39,7 +34,6 @@ export const staff: StaffMember[] = [
     name: 'Team Member',
     role: 'Nail Technician',
     blurb: 'Skilled across manicures, pedicures and enhancements, with a warm, friendly approach.',
-    ghlCalendarUrl: '',
   },
 ]
 
@@ -47,7 +41,7 @@ export function staffById(id: string): StaffMember | undefined {
   return staff.find((s) => s.id === id)
 }
 
-/** True once at least one specialist has a connected GHL calendar. */
+/** True once the shared GHL booking URL has been set in booking.ts. */
 export function isOnlineBookingEnabled(): boolean {
-  return staff.some((s) => s.ghlCalendarUrl.trim().length > 0)
+  return booking.ghlBookingUrl.trim().length > 0
 }

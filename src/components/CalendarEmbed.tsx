@@ -3,7 +3,8 @@ import { booking } from '@/data/booking'
 
 /**
  * Embeds a single GHL calendar. GHL's form_embed.js auto-resizes the iframe to fit
- * its content (date and time picker, contact form, and the deposit checkout).
+ * its content (the service menu, date and time picker, contact form, and any
+ * deposit checkout).
  */
 export function CalendarEmbed({ url, title }: { url: string; title: string }) {
   useEffect(() => {
@@ -23,7 +24,7 @@ export function CalendarEmbed({ url, title }: { url: string; title: string }) {
         title={title}
         scrolling="no"
         loading="lazy"
-        style={{ width: '100%', minHeight: 720, border: 'none' }}
+        style={{ width: '100%', minHeight: 720, border: 0 }}
       />
     </div>
   )

@@ -169,7 +169,7 @@ export function ServiceTemplate({ service }: { service: Service }) {
             subtitle="A few sets created by our team in Champaign. Bring a photo and we will tailor the perfect look to you."
           />
           <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-            {photosForSlug(service.slug, 4).map((photo) => (
+            {(service.images?.length ? service.images.slice(0, 4) : photosForSlug(service.slug, 4)).map((photo) => (
               <Photo
                 key={photo.name}
                 name={photo.name}

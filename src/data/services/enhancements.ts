@@ -58,17 +58,17 @@ export const enhancementServices: Service[] = [
     prices: [
       {
         name: "Full Set Regular Acrylic",
-        price: "$45+",
-        duration: "~30 to 45 min"
+        price: "$40+",
+        duration: "~30 min"
       },
       {
         name: "Full Set Gel or Shellac",
-        price: "$55+",
+        price: "$50+",
         duration: "~45 min"
       }
     ],
-    priceFrom: "$45",
-    duration: "~30 to 60 min",
+    priceFrom: "$40",
+    duration: "~30 to 45 min",
     gallery: [
       "Classic almond-shape acrylic full set in a neutral nude",
       "Gel X nails with a deep burgundy gel color and glossy finish",
@@ -76,6 +76,12 @@ export const enhancementServices: Service[] = [
       "Coffin-shape acrylics with a custom ombre design in pink and white",
       "Short, rounded Gel X nails in a sheer milky white, perfect for everyday wear",
       "Detailed nail art accent nail featuring hand-painted florals on a pastel base"
+    ],
+    images: [
+      { name: "nails-09", alt: "Long white coffin nail enhancements with a smooth, polished finish" },
+      { name: "nails-18", alt: "Coral and orange ombre coffin nail enhancements" },
+      { name: "nails-02", alt: "Black and gold glitter coffin nails with crystal accents" },
+      { name: "nails-14", alt: "Long coffin nails with bright, bold custom nail art" }
     ],
     faqs: [
       {
@@ -152,12 +158,12 @@ export const enhancementServices: Service[] = [
     prices: [
       {
         name: "Full Set Regular Acrylic",
-        price: "$45+",
-        duration: "~30 to 45 min"
+        price: "$40+",
+        duration: "~30 min"
       }
     ],
-    priceFrom: "$45",
-    duration: "~30 to 45 min",
+    priceFrom: "$40",
+    duration: "~30 min",
     gallery: [
       "Freshly applied almond acrylic set in a warm nude gel color",
       "Long coffin acrylics with a glossy white gel finish",
@@ -165,6 +171,12 @@ export const enhancementServices: Service[] = [
       "Sculpted stiletto acrylics in a deep navy with subtle shimmer",
       "Medium-length acrylic nails in a sheer pink with glitter accent nail",
       "Natural-length acrylic overlay in clear gel, showing off the nail shape without color"
+    ],
+    images: [
+      { name: "acrylic-fullset", alt: "Freshly sculpted acrylic full set shaped to a glossy finish" },
+      { name: "nails-09", alt: "Long white coffin acrylic set with a smooth, polished finish" },
+      { name: "nails-18", alt: "Coral and orange ombre coffin acrylic nails" },
+      { name: "nails-02", alt: "Black and gold glitter coffin acrylics with crystal accents" }
     ],
     faqs: [
       {
@@ -244,11 +256,11 @@ export const enhancementServices: Service[] = [
     prices: [
       {
         name: "Full Set Gel or Shellac",
-        price: "$55+",
+        price: "$50+",
         duration: "~45 min"
       }
     ],
-    priceFrom: "$55",
+    priceFrom: "$50",
     duration: "~45 min",
     gallery: [
       "Gel X almond-length extensions in a soft ballet pink gel color",
@@ -257,6 +269,12 @@ export const enhancementServices: Service[] = [
       "Gel X nails with a nude-to-white ombre effect across the tip",
       "Short round Gel X nails in a rich berry gel color, natural and polished",
       "Gel X stiletto tips featuring a foil chrome powder finish in rose gold"
+    ],
+    images: [
+      { name: "gel-x", alt: "Lightweight Gel X extensions with a glossy, natural-looking finish" },
+      { name: "nails-18", alt: "Coral and orange ombre coffin Gel X nails" },
+      { name: "nails-09", alt: "Long white coffin Gel X extensions with a high-gloss finish" },
+      { name: "nails-12", alt: "Warm coral Gel X nails with a smooth, glossy coat" }
     ],
     faqs: [
       {
@@ -346,6 +364,12 @@ export const enhancementServices: Service[] = [
       "Dip powder manicure in a lavender shade with a white French tip accent",
       "Rich chocolate brown dip powder on short almond nails, cozy fall look"
     ],
+    images: [
+      { name: "dip-powder", alt: "Dip powder manicure in a soft, natural shade with a glossy finish" },
+      { name: "nails-16", alt: "Natural nude nails with a clean, durable dip powder look" },
+      { name: "nails-13", alt: "Rich burgundy nails with a durable, high-shine finish" },
+      { name: "nails-04", alt: "Nude pink nails with subtle detailing" }
+    ],
     faqs: [
       {
         q: "Is dip powder the same as acrylic?",
@@ -431,6 +455,12 @@ export const enhancementServices: Service[] = [
       "French tip with a thin gold foil line at the smile, minimal and modern",
       "Full-set floral design in coral and leaf green on a natural-length square nail"
     ],
+    images: [
+      { name: "nails-23", alt: "Pink and yellow 3D flower nails with sparkling crystal accents" },
+      { name: "nails-11", alt: "Colorful nail art styled with fresh white hydrangeas" },
+      { name: "nails-10", alt: "Long nails with colorful art and a soft white floral accent" },
+      { name: "nails-14", alt: "Long coffin nails with bright, bold custom nail art" }
+    ],
     faqs: [
       {
         q: "How much does nail art cost?",
@@ -505,17 +535,17 @@ export const enhancementServices: Service[] = [
     prices: [
       {
         name: "Fill In Regular",
-        price: "$42+",
-        duration: "~45 min"
+        price: "$30+",
+        duration: "~30 min"
       },
       {
         name: "Fill In Gel or Shellac",
-        price: "$50+",
-        duration: "~45 to 60 min"
+        price: "$40+",
+        duration: "~30 min"
       }
     ],
-    priceFrom: "$42",
-    duration: "~45 to 60 min",
+    priceFrom: "$30",
+    duration: "~30 min",
     gallery: [
       "Before-and-after fill-in on a coffin acrylic set, regrowth filled and color refreshed in a dusty rose",
       "Gel fill-in on medium almond nails with a new coral gel color applied",
@@ -523,6 +553,12 @@ export const enhancementServices: Service[] = [
       "Fill-in appointment with a color change from nude to a deep emerald gel",
       "Close-up of a newly filled acrylic set showing a smooth blend between new and existing product",
       "Fill-in on long coffin nails reshaped and recolored in a classic white gel"
+    ],
+    images: [
+      { name: "acrylic-fillin", alt: "A nail technician filling in new growth on an acrylic set" },
+      { name: "nails-09", alt: "Long white coffin acrylic set looking fresh after a fill-in" },
+      { name: "nails-18", alt: "Coral ombre coffin set kept neat with a regular fill-in" },
+      { name: "nails-02", alt: "Bold acrylic set refreshed at a fill-in appointment" }
     ],
     faqs: [
       {
@@ -594,17 +630,23 @@ export const enhancementServices: Service[] = [
     prices: [
       {
         name: "Nail Repair",
-        price: "$15+",
+        price: "$10+",
         duration: "~15 min"
       }
     ],
-    priceFrom: "$15",
+    priceFrom: "$10",
     duration: "~15 min",
     gallery: [
       "Repaired coffin acrylic nail rebuilt and recolored to match a nude-pink full set",
       "Close-up of a freshly repaired gel nail, seamlessly blended with the rest of the set",
       "Single acrylic nail repaired and reshaped to an almond tip, matching the existing length",
       "Before-and-after of a cracked nail repaired with fresh acrylic and re-sealed in a burgundy gel"
+    ],
+    images: [
+      { name: "nails-13", alt: "A complete, intact set in rich burgundy after a nail repair" },
+      { name: "nails-09", alt: "Long white coffin set restored to a flawless, complete look" },
+      { name: "nails-04", alt: "Nude pink set with every nail matched and seamless" },
+      { name: "nails-16", alt: "Natural nude nails looking even and complete" }
     ],
     faqs: [
       {
@@ -613,7 +655,7 @@ export const enhancementServices: Service[] = [
       },
       {
         q: "How is nail repair priced?",
-        a: "Nail repair starts at $15 for a single nail. If the repair is more involved, such as a full rebuild or matching a complex nail art design, the price reflects the additional time and materials. We will always let you know the cost estimate during the initial assessment."
+        a: "Nail repair starts at $10 for a single nail. If the repair is more involved, such as a full rebuild or matching a complex nail art design, the price reflects the additional time and materials. We will always let you know the cost estimate during the initial assessment."
       },
       {
         q: "Should I just wait until my fill-in appointment to fix a broken nail?",
@@ -680,17 +722,23 @@ export const enhancementServices: Service[] = [
     prices: [
       {
         name: "Take Off or Removal",
-        price: "$15+",
+        price: "$10+",
         duration: "~15 min"
       }
     ],
-    priceFrom: "$15",
+    priceFrom: "$10",
     duration: "~15 min",
     gallery: [
       "Natural nails freshly revealed after soak-off acrylic removal, smooth and evenly shaped",
       "Post-removal nail care with cuticle oil being applied to clean, healthy natural nails",
       "Before-and-after of dip powder removal, showing natural nails in great condition afterward",
       "Gel removal complete on short oval nails, ready for a fresh gel manicure"
+    ],
+    images: [
+      { name: "nail-removal", alt: "Healthy natural nails after a gentle soak-off removal" },
+      { name: "nails-16", alt: "Natural nude nails in clean, healthy condition after removal" },
+      { name: "nails-04", alt: "Soft nude nails ready for a fresh service after removal" },
+      { name: "nails-07", alt: "Clean, polished natural nails after a careful removal" }
     ],
     faqs: [
       {

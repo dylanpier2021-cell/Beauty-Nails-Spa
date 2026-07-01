@@ -20,7 +20,7 @@ export default function Pricing() {
     <>
       <Seo
         title="Nail Salon Prices in Champaign, IL | Beauty Nails Spa"
-        description="See the full price menu at Beauty Nails Spa in Champaign, IL. Manicures from $30, spa pedicures, gel, dip, acrylic full sets and nail art. No hidden fees."
+        description="See the full price menu at Beauty Nails Spa in Champaign, IL. Manicures from $20, spa pedicures, gel, dip, acrylic full sets and nail art. No hidden fees."
         path="/pricing"
       />
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />

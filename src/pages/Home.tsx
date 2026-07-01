@@ -41,9 +41,9 @@ const featuredSlugs = [
 ]
 
 const priceHighlights = [
-  { name: 'Shellac (Gel) Manicure', price: '$45' },
+  { name: 'Shellac (Gel) Manicure', price: '$40' },
   { name: 'Deluxe Volcano Spa Pedicure', price: '$60' },
-  { name: 'Full Set Gel or Shellac', price: '$55+' },
+  { name: 'Full Set Gel or Shellac', price: '$50+' },
   { name: 'Dipping Powder Manicure', price: '$45' },
 ]
 

@@ -45,6 +45,25 @@ const salon = {
   'salon-stations': 'unnamed - 2026-06-10T122319.843.jpg',
 }
 
+// New stock photos for services with no truly representative real shot yet.
+// Drop each source file (named exactly as below) into SRC, then run `npm run photos`.
+// outName -> source filename. See the shopping list in the project notes for the
+// kind of stock image each one should be.
+const stock = {
+  'pedicure-closeup': 'pedicure-closeup.jpg',
+  'pedicure-gel': 'pedicure-gel.jpg',
+  'pedicure-spa': 'pedicure-spa.jpg',
+  'pedicure-deluxe': 'pedicure-deluxe.jpg',
+  'pedicure-kids': 'pedicure-kids.jpg',
+  'callus-treatment': 'callus-treatment.jpg',
+  'dip-powder': 'dip-powder.jpg',
+  'acrylic-fullset': 'acrylic-fullset.jpg',
+  'acrylic-fillin': 'acrylic-fillin.jpg',
+  'gel-x': 'gel-x.jpg',
+  'nail-removal': 'nail-removal.jpg',
+  'manicure-kids': 'manicure-kids.jpg',
+}
+
 async function emit(outName, srcFile, widths) {
   const input = join(SRC, srcFile)
   for (const w of widths) {
@@ -59,11 +78,13 @@ async function run() {
   await mkdir(OUT, { recursive: true })
   const jobs = []
   for (const [name, src] of Object.entries(nails)) jobs.push(emit(name, src, [400, 800]))
+  for (const [name, src] of Object.entries(stock)) jobs.push(emit(name, src, [400, 800]))
   for (const [name, src] of Object.entries(salon)) {
     jobs.push(emit(name, src, name === 'hero' ? [560, 1000] : [400, 800]))
   }
   await Promise.all(jobs)
-  console.log(`Optimized ${Object.keys(nails).length + Object.keys(salon).length} photos into public/images.`)
+  const total = Object.keys(nails).length + Object.keys(stock).length + Object.keys(salon).length
+  console.log(`Optimized ${total} photos into public/images.`)
 }
 
 run().catch((err) => {

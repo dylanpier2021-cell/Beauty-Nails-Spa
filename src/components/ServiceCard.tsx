@@ -5,7 +5,7 @@ import { Photo } from './Photo'
 import { ArrowRightIcon } from './icons'
 
 export function ServiceCard({ service }: { service: Service }) {
-  const photo = photoForSlug(service.slug)
+  const photo = service.images?.[0] ?? photoForSlug(service.slug)
   return (
     <Link
       to={`/${service.slug}`}
