@@ -73,6 +73,7 @@ export default function Home() {
               <span className="mt-1 block bg-gold-text bg-clip-text font-normal italic text-transparent">
                 Crafted With Confidence
               </span>
+              <meta name="google-site-verification" content="xBBAzszFmSbRPq2OUBLji0MFk286G-QgN6rWuJEF1fo" />
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
               Professional nail care and stunning designs for every occasion, finished with premium
