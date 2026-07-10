@@ -12,6 +12,7 @@ import { MapEmbed } from '@/components/MapEmbed'
 import { Photo } from '@/components/Photo'
 import { Reveal } from '@/components/Reveal'
 import { CalendarEmbed } from '@/components/CalendarEmbed'
+import { GoogleCalendarBooking } from '@/components/GoogleCalendarBooking'
 import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon, ShieldCheckIcon, SparkleIcon } from '@/components/icons'
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -81,7 +82,9 @@ export default function Book() {
                 )}
               </div>
 
-              {booking.ghlBookingUrl ? (
+              {booking.googleAppsScriptUrl ? (
+                <GoogleCalendarBooking />
+              ) : booking.ghlBookingUrl ? (
                 <CalendarEmbed url={booking.ghlBookingUrl} title={`Book at ${business.name}`} />
               ) : (
                 <div className="rounded-2xl border-2 border-dashed border-primary/40 bg-secondary p-6 text-center">
