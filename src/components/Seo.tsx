@@ -45,7 +45,7 @@ export function Seo({ title, description, path, image, type = 'website', noindex
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={img} />
-
+<meta name="google-site-verification" content="xBBAzszFmSbRPq2OUBLji0MFk286G-QgN6rWuJEF1fo" />
       {children}
     </Head>
   )
