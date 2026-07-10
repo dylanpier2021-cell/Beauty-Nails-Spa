@@ -13,7 +13,6 @@ import { Photo } from '@/components/Photo'
 import { Reveal } from '@/components/Reveal'
 import { CalendarEmbed } from '@/components/CalendarEmbed'
 import { GoogleCalendarBooking } from '@/components/GoogleCalendarBooking'
-import { MetaPixel } from '@/components/MetaPixel'
 import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon, ShieldCheckIcon, SparkleIcon } from '@/components/icons'
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -43,8 +42,6 @@ export default function Book() {
         path="/book"
       />
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
-      {/* Meta Pixel: fires a PageView on the booking page only. */}
-      <MetaPixel />
 
       <PageHero
         eyebrow="Booking"

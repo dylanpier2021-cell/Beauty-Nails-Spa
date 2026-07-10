@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { ChatWidget } from '@/components/ChatWidget'
+import { MetaPixel } from '@/components/MetaPixel'
 import { JsonLd } from '@/components/JsonLd'
 import { localBusinessSchema, websiteSchema } from '@/lib/schema'
 
@@ -31,6 +32,8 @@ export default function App() {
       </main>
       <Footer />
       <ChatWidget />
+      {/* Meta Pixel base code, installed on every page. */}
+      <MetaPixel />
     </div>
   )
 }

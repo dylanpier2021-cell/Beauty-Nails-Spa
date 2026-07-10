@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 /** Meta (Facebook) Pixel ID for Beauty Nails Spa. */
 const PIXEL_ID = '1021639393782840'
@@ -19,35 +20,40 @@ declare global {
 }
 
 /**
- * Meta Pixel, scoped to the booking page. Rendered only from <Book>, so a Meta
- * PageView fires whenever a guest reaches /book (the key conversion step),
- * including on client-side navigation into the page. The pixel library is
- * bootstrapped once; each visit sends a fresh PageView. The <noscript> image
- * covers visitors with JavaScript disabled on the pre-rendered page.
+ * Meta Pixel base code, installed site-wide (rendered once from <App>). The
+ * pixel library is bootstrapped a single time, then a PageView is sent on first
+ * load and on every client-side route change, so every page is tracked the way
+ * Meta expects. The <noscript> image covers visitors with JavaScript disabled.
  */
 export function MetaPixel() {
+  const { pathname } = useLocation()
+
+  // Bootstrap the pixel library once for the whole app.
   useEffect(() => {
-    if (!window.fbq) {
-      const fbq = function (...args: unknown[]) {
-        if (fbq.callMethod) fbq.callMethod.apply(fbq, args)
-        else fbq.queue.push(args)
-      } as Fbq
-      fbq.queue = []
-      fbq.push = fbq
-      fbq.loaded = true
-      fbq.version = '2.0'
-      window.fbq = fbq
-      window._fbq = window._fbq ?? fbq
+    if (window.fbq) return
+    const fbq = function (...args: unknown[]) {
+      if (fbq.callMethod) fbq.callMethod.apply(fbq, args)
+      else fbq.queue.push(args)
+    } as Fbq
+    fbq.queue = []
+    fbq.push = fbq
+    fbq.loaded = true
+    fbq.version = '2.0'
+    window.fbq = fbq
+    window._fbq = window._fbq ?? fbq
 
-      const script = document.createElement('script')
-      script.async = true
-      script.src = 'https://connect.facebook.net/en_US/fbevents.js'
-      document.head.appendChild(script)
+    const script = document.createElement('script')
+    script.async = true
+    script.src = 'https://connect.facebook.net/en_US/fbevents.js'
+    document.head.appendChild(script)
 
-      window.fbq('init', PIXEL_ID)
-    }
-    window.fbq('track', 'PageView')
+    window.fbq('init', PIXEL_ID)
   }, [])
+
+  // Track a PageView on first load and on each subsequent navigation.
+  useEffect(() => {
+    window.fbq?.('track', 'PageView')
+  }, [pathname])
 
   return (
     <noscript>
