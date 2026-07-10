@@ -31,14 +31,14 @@ export const booking = {
   /**
    * Google Calendar booking (Hien Vu's salon calendar).
    *
-   * Paste the deployed Google Apps Script Web App URL here (ends in /exec) — see
+   * Paste the deployed Google Apps Script Web App URL here (ends in /exec), see
    * Code.gs and SETUP-INSTRUCTIONS.md in the project root. The `/book` page uses the
    * on-brand <GoogleCalendarBooking /> widget, which reads open times from and
    * writes appointments to the salon's Google Calendar, enforcing the 3-station
    * limit. While empty, the page shows a "call to book" fallback.
    */
   googleAppsScriptUrl: 'https://script.google.com/macros/s/AKfycbxOgxexbmHniNohEctZ_DCGSG8RzsNhYjCF9sPNoGCsrAlF-pdcBZNYIV0IPrIoBz35/exec',
-  /** Shared secret — must match TOKEN in Code.gs. */
+  /** Shared secret, must match TOKEN in Code.gs. */
   googleAppsScriptToken: 'beautynails-2026',
 
   /**

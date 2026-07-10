@@ -157,7 +157,7 @@ export function GoogleCalendarBooking() {
         })}
       </ol>
 
-      {/* STEP 1 — service */}
+      {/* STEP 1: service */}
       {step === 1 && (
         <div>
           <p className="mb-4 text-sm text-muted-foreground">
@@ -202,7 +202,7 @@ export function GoogleCalendarBooking() {
         </div>
       )}
 
-      {/* STEP 2 — date & time */}
+      {/* STEP 2: date and time */}
       {step === 2 && service && (
         <div>
           <p className="mb-4 text-sm text-muted-foreground">
@@ -256,7 +256,7 @@ export function GoogleCalendarBooking() {
         </div>
       )}
 
-      {/* STEP 3 — details */}
+      {/* STEP 3: details */}
       {step === 3 && service && slot && (
         <div>
           <div className="mb-4 rounded-xl bg-secondary p-4 text-sm">

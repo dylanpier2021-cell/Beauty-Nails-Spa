@@ -24,7 +24,7 @@ export function ChatWidget() {
     script.id = 'ghl-chat-widget'
     script.src = 'https://widgets.leadconnectorhq.com/loader.js'
     script.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js')
-    script.setAttribute('data-widget-id', '6a29fa2ca7554820d94cc015')
+    script.setAttribute('data-widget-id', '6a513921a126fb924dd551a1')
     script.setAttribute('data-source', 'WEB_USER')
     document.body.appendChild(script)
   }, [hidden])

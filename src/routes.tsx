@@ -35,7 +35,8 @@ export const routes: RouteRecord[] = [
       { path: 'book', ...page(() => import('./pages/Book'), 'src/pages/Book.tsx') },
 
       { path: 'review-us-online', ...page(() => import('./pages/Reviews'), 'src/pages/Reviews.tsx', 'ReviewUsOnline') },
-      { path: 'review', ...page(() => import('./pages/Reviews'), 'src/pages/Reviews.tsx', 'ReviewsRead') },
+      { path: 'review', ...page(() => import('./pages/ReviewGate'), 'src/pages/ReviewGate.tsx') },
+      { path: 'feedback', ...page(() => import('./pages/Feedback'), 'src/pages/Feedback.tsx') },
       { path: 'leave-a-review', ...page(() => import('./pages/Reviews'), 'src/pages/Reviews.tsx', 'LeaveAReview') },
 
       { path: 'blog', ...page(() => import('./pages/Blog'), 'src/pages/Blog.tsx') },
