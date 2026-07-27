@@ -660,4 +660,6 @@ export const blogPosts: BlogPost[] = [
       "nail-care-tips-between-salon-visits"
     ]
   }
-]
+] 
+
+
