@@ -144,3 +144,5 @@ Deploy the `dist/` folder to any static host (Netlify, Vercel, Cloudflare Pages,
 npm run build
 # then deploy the dist/ directory
 ```
+
+
