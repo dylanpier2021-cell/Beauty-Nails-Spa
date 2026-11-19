@@ -116,6 +116,10 @@ export type ContentBlock =
   | { type: 'ol'; items: string[] }
   | { type: 'quote'; text: string; cite?: string }
   | { type: 'callout'; title: string; text: string }
+  /** Single image. `name` is the base of /images/<name>-<w>.webp. */
+  | { type: 'image'; name: string; alt: string; caption?: string }
+  /** Responsive grid of captioned images. */
+  | { type: 'gallery'; items: { name: string; alt: string; caption: string }[] }
 
 export interface BlogPost {
   slug: string
