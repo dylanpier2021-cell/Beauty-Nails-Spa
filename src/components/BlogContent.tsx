@@ -1,5 +1,6 @@
 import type { ContentBlock } from '@/data/types'
 import { RichText } from './RichText'
+import { Photo } from './Photo'
 import { SparkleIcon } from './icons'
 
 function Block({ block }: { block: ContentBlock }) {
@@ -59,6 +60,42 @@ function Block({ block }: { block: ContentBlock }) {
           <p className="mt-2 leading-relaxed text-foreground/90">
             <RichText text={block.text} />
           </p>
+        </div>
+      )
+    case 'image':
+      return (
+        <figure className="my-2">
+          <Photo
+            name={block.name}
+            alt={block.alt}
+            aspect="aspect-[4/5]"
+            sizes="(min-width: 768px) 720px, 100vw"
+            className="rounded-2xl border border-border shadow-card"
+          />
+          {block.caption && (
+            <figcaption className="mt-3 text-center text-sm text-muted-foreground">
+              <RichText text={block.caption} />
+            </figcaption>
+          )}
+        </figure>
+      )
+    case 'gallery':
+      return (
+        <div className="grid gap-6 sm:grid-cols-2">
+          {block.items.map((item, i) => (
+            <figure key={i} className="flex flex-col">
+              <Photo
+                name={item.name}
+                alt={item.alt}
+                aspect="aspect-[3/4]"
+                sizes="(min-width: 768px) 360px, 50vw"
+                className="rounded-2xl border border-border shadow-card"
+              />
+              <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                <RichText text={item.caption} />
+              </figcaption>
+            </figure>
+          ))}
         </div>
       )
     default:
